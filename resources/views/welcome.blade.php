@@ -357,7 +357,7 @@
 <footer class="footer">
     <div id="test" style="width: 100%; text-align: center; margin-top: 10px;"></div>
     <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#">Догори</a></p>
     </div>
 
 </footer>
@@ -391,7 +391,7 @@ function getContentImage() {
         $(canvas).get(0).toBlob(function (blob) {
         var urlCreator = window.URL || window.webkitURL;
         var imageUrl = urlCreator.createObjectURL(blob);
-        $('#test').append('<img src="' + imageUrl + '">');
+        $('#test').append('<img src="' + imageUrl + '"><br>');
 
     });
 });
@@ -474,8 +474,43 @@ function LoadeShirts() {
         });
 
         $('#imgsavepdf').on('click',function () {
+            $('.loading-blink').loading();
+            $('.loading-blink').show();
+            var doc = new jsPDF();
+            doc.setFontSize(20);
 
+            setTimeout(function () {
+                html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
+                    function convertCanvasToImage(c) {
+                    var image = new Image();
+                    image.src = c.toDataURL("image/jpeg");
+                    doc.addImage(image.src, 'JPEG', 30, 5, 145, 145);
+                    return image;
+                }
+                convertCanvasToImage(canvas);
 
+            });
+            }, 100);
+            setTimeout(function () {
+                rotate();
+
+            }, 700);
+            setTimeout(function () {
+                html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
+                    function convertCanvasToImage(c) {
+                    var image = new Image();
+                    image.src = c.toDataURL("image/jpeg");
+                    doc.addImage(image.src, 'JPEG', 30, 150, 145, 145);
+                    return image;
+                }
+                convertCanvasToImage(canvas);
+            });
+            }, 1100);
+            setTimeout(function () {
+                doc.save("T-Shirt.pdf");
+                $('.loading-blink').hide();
+                $('#test').empty();
+            }, 1700);
 
         });
 
@@ -490,7 +525,5 @@ function LoadeShirts() {
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
