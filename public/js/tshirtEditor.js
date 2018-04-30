@@ -1,4 +1,5 @@
 var canvas;
+var IMAGE_NAME = "crew";
 var tshirts = new Array(); //prototype: [{style:'x',color:'white',front:'a',back:'b',price:{tshirt:'12.95',frontPrint:'4.99',backPrint:'4.99',total:'22.47'}}]
 var a;
 var b;
@@ -281,7 +282,7 @@ var line4;
 		   //function() {
 			   	if ($(this).attr("data-original-title") == "Show Back View") {
 			   		$(this).attr('data-original-title', 'Show Front View');
-			        $("#tshirtFacing").attr("src","img/t-shirts/crew_back.png");
+			        $("#tshirtFacing").attr("src","img/t-shirts/"+IMAGE_NAME+"_back.png");
 			        a = JSON.stringify(canvas);
 			        canvas.clear();
 			        try
@@ -294,7 +295,7 @@ var line4;
 
 			    } else {
 			    	$(this).attr('data-original-title', 'Show Back View');
-			    	$("#tshirtFacing").attr("src","img/t-shirts/crew_front.png");
+			    	$("#tshirtFacing").attr("src","img/t-shirts/"+IMAGE_NAME+"_front.png");
 			    	b = JSON.stringify(canvas);
 			    	canvas.clear();
 			    	try

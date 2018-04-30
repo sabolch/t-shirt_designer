@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Colors;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $path = public_path() . '/img/templates/';
+        $images = self::getFiles($path);
+        $colors = Colors::all();
+        return view('welcome',compact('colors','images'));
+    }
+
+    private static function getFiles($path)
+    {
+        if (is_dir($path)) {
+            $files = array_diff(scandir($path), array('.', '..'));
+        } else {
+            $files = [];
+        }
+        return $files;
     }
 }
