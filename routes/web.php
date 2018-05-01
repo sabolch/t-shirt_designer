@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return redirect(route('home'));
 });
+Route::get('/dashboard', function () {
+    return "Megvan";
+});
 
 Auth::routes();
 

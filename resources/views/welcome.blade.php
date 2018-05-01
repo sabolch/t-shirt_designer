@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Футболки</title>
+    <title>Online дизайнер принтів для футболок</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" href="img/casual-t-shirt-.png" />
+    <link rel="icon" type="image/png" href="img/casual-t-shirt-.png"/>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -152,7 +152,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="{{ route('home') }}">Спеціальна футболка</a>
+            <a class="brand" href="{{ route('home') }}">Online дизайнер принтів для футболок</a>
 
         </div>
     </div>
@@ -179,9 +179,9 @@
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
                                     Стиль футболки</p>
                                 <select id="shirtstyle" class="form-control">
-                                    <option value="crew" selected="selected">Короткі рукавички</option>
+                                    <option value="crew" selected="selected">Короткий рукав</option>
                                     <option value="womens_crew">Жіноча футболка</option>
-                                    <option value="mens_longsleeve">З довгим рукавички</option>
+                                    <option value="mens_longsleeve">Довгий рукав</option>
                                     <option value="mens_hoodie">Худі</option>
                                     <option value="mens_tank">Майки</option>
                                 </select>
@@ -190,29 +190,26 @@
                             <div class="well">
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
                                     Дія</p>
-                                <button  id="imgsavejpg" class="btn btn-primary" title="Зберегти як зображення"><i style="font-size: 25px;"
-                                                                                        class="fa fa-camera"
-                                                                                        aria-hidden="true"></i></button>
-                                <button  id="imgsavepdf" class="btn btn-primary" title="Зберегти як PDF"><i style="font-size: 25px;"
-                                                                                                                   class="fa fa-file-pdf-o"
-                                                                                                                   aria-hidden="true"></i></button>
-                                <button id="rotate" title="Повернути" class="btn btn-primary"><i style="font-size: 25px;"
-                                                                               class="fa fa-repeat"
-                                                                               aria-hidden="true"></i></button>                                <button  class="btn btn-primary" onclick="location.reload();" title="Видалити все"><i style="font-size: 25px;"
-                                                                               class="fa fa-trash"
-                                                                               aria-hidden="true"></i></button>
+                                <button id="imgsavejpg" class="btn btn-primary" title="Зберегти як зображення"><i
+                                            style="font-size: 25px;"
+                                            class="fa fa-camera"
+                                            aria-hidden="true"></i></button>
+                                <button id="imgsavepdf" class="btn btn-primary" title="Зберегти як PDF"><i
+                                            style="font-size: 25px;"
+                                            class="fa fa-file-pdf-o"
+                                            aria-hidden="true"></i></button>
+                                <button id="rotate" title="Повернути" class="btn btn-primary"><i
+                                            style="font-size: 25px;"
+                                            class="fa fa-repeat"
+                                            aria-hidden="true"></i></button>
+                                <button class="btn btn-primary" onclick="location.reload();" title="Видалити все"><i
+                                            style="font-size: 25px;"
+                                            class="fa fa-trash"
+                                            aria-hidden="true"></i></button>
 
                             </div>
 
-                            <div class="well">
-                                <ul class="nav">
-                                    <h3>Виберіть колір</h3>
-                                    @foreach($colors as $color)
-                                    <li class="color-preview" title="{{$color->name}}" style="background-color:{{$color->color}};"></li>
-                                        @endforeach
 
-                                </ul>
-                            </div>
                         </div>
                         <div class="tab-pane" id="tab2">
                             <div class="well">
@@ -226,7 +223,7 @@
                                 </div>
                                 <h4>Додати зображення
                                     <form hidden id="form1" runat="server">
-                                        <input hidden type='file' id="imgInp" />
+                                        <input hidden type='file' id="imgInp"/>
                                     </form>
                                     <button id="addimg" class="btn btn-primary"><i style="font-size: 15px;"
                                                                                    class="fa fa-plus"
@@ -236,7 +233,7 @@
                                 <div id="avatarlist" style="max-height: 500px; overflow: scroll;">
                                     @foreach($images as $image)
                                         <img class="img-polaroid tt" src="img/templates/{{$image}}">
-                                        @endforeach
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -327,24 +324,13 @@
 
             <div class="span3">
                 <div class="well">
-                    <h3>Загальна ціна</h3>
-                    <p>
-                    <table class="table">
-                        <tr>
-                            <td>Футболка</td>
-                            <td align="right">$300</td>
-                        </tr>
-                        <tr>
-                            <td>Дизайн</td>
-                            <td align="right">$100</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>Всього</strong></td>
-                            <td align="right"><strong>$400</strong></td>
-                        </tr>
-                    </table>
-                    </p>
+                    <ul class="nav">
+                        <h3>Виберіть колір</h3>
+                        @foreach($colors as $color)
+                            <li class="color-preview" title="{{$color->name}}"
+                                style="background-color:{{$color->color}};"></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
@@ -352,13 +338,14 @@
     </section>
 </div><!-- /container -->
 
-
-<!-- Footer ================================================== -->
-<footer class="footer">
-    <div id="test" style="width: 100%; text-align: center; margin-top: 10px;"></div>
-    <div class="container">
-        <p class="pull-right"><a href="#">Догори</a></p>
-    </div>
+<footer class="footer" id="footer" style="background-color: #333333; color: white; text-align: center; font-size: 20px;">
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <a href="#"> <img style="max-width: 100px;padding: 15px;"
+                     src="http://www.college.uzhnu.edu.ua/wp-content/uploads/2015/11/%D0%91%D0%B5%D0%B7-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1.png"></a>
+                <p class="Verdana">Для оформлення індивідуальних замовлень пишіть на електронну адресу: <i class="fa fa-envelope"></i> trymbati@gmail.com</p>
+                <p class="Verdana"> Природничо-гуманітарний коледж © 2018. Всі права захищені.</p>
+            </div>
 
 </footer>
 <!-- Le javascript
@@ -384,31 +371,33 @@
 
     $(document).ready(function () {
 
-/*******************************************************************************/
-function getContentImage() {
-    html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
-        // document.body.appendChild(canvas)
-        $(canvas).get(0).toBlob(function (blob) {
-        var urlCreator = window.URL || window.webkitURL;
-        var imageUrl = urlCreator.createObjectURL(blob);
-        $('#test').append('<img src="' + imageUrl + '"><br>');
+        /*******************************************************************************/
+        function getContentImage() {
+            html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
+                // document.body.appendChild(canvas)
+                $(canvas).get(0).toBlob(function (blob) {
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(blob);
+                $('#test').append('<img src="' + imageUrl + '"><br>');
 
-    });
-});
-}
+            });
+        })
+            ;
+        }
 
-function LoadeShirts() {
-    $('.loading-blink').loading();
-    $('.loading-blink').show();
-    getContentImage();
+        function LoadeShirts() {
+            $('.loading-blink').loading();
+            $('.loading-blink').show();
+            getContentImage();
 
-    setTimeout(function () {
-        rotate();
-    }, 500);
-    setTimeout(function () {
-        getContentImage();
-    }, 1200);
-}
+            setTimeout(function () {
+                rotate();
+            }, 500);
+            setTimeout(function () {
+                getContentImage();
+            }, 1200);
+        }
+
         /*******************************************************************************/
 
 
@@ -417,7 +406,7 @@ function LoadeShirts() {
         });
         $('.loading-blink').hide();
 
-        $('#imgsavejpg').on('click',function () {
+        $('#imgsavejpg').on('click', function () {
             function save() {
                 html2canvas(document.querySelector("#test")).then(canvas => {
                     // document.body.appendChild(canvas)
@@ -430,8 +419,10 @@ function LoadeShirts() {
 
 
                 });
-            });
+            })
+                ;
             }
+
             LoadeShirts();
             setTimeout(function () {
                 save();
@@ -457,23 +448,23 @@ function LoadeShirts() {
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    $('#avatarlist').append('<img class="img-polaroid tt" src="'+e.target.result+'">');
+                    $('#avatarlist').append('<img class="img-polaroid tt" src="' + e.target.result + '">');
                 }
 
                 reader.readAsDataURL(input.files[0]);
             }
         }
 
-        $("#imgInp").change(function(){
+        $("#imgInp").change(function () {
             readURL(this);
         });
 
-        $('#shirtstyle').on('change',function () {
-            $('#tshirtFacing').attr("src","img/t-shirts/" + $(this).val() + "_front.png");
+        $('#shirtstyle').on('change', function () {
+            $('#tshirtFacing').attr("src", "img/t-shirts/" + $(this).val() + "_front.png");
             IMAGE_NAME = $(this).val();
         });
 
-        $('#imgsavepdf').on('click',function () {
+        $('#imgsavepdf').on('click', function () {
             $('.loading-blink').loading();
             $('.loading-blink').show();
             var doc = new jsPDF();
@@ -481,7 +472,8 @@ function LoadeShirts() {
 
             setTimeout(function () {
                 html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
-                    function convertCanvasToImage(c) {
+                    function convertCanvasToImage(c)
+                {
                     var image = new Image();
                     image.src = c.toDataURL("image/jpeg");
                     doc.addImage(image.src, 'JPEG', 30, 5, 145, 145);
@@ -489,7 +481,8 @@ function LoadeShirts() {
                 }
                 convertCanvasToImage(canvas);
 
-            });
+            })
+                ;
             }, 100);
             setTimeout(function () {
                 rotate();
@@ -497,14 +490,16 @@ function LoadeShirts() {
             }, 700);
             setTimeout(function () {
                 html2canvas(document.querySelector("#shirtDiv")).then(canvas => {
-                    function convertCanvasToImage(c) {
+                    function convertCanvasToImage(c)
+                {
                     var image = new Image();
                     image.src = c.toDataURL("image/jpeg");
                     doc.addImage(image.src, 'JPEG', 30, 150, 145, 145);
                     return image;
                 }
                 convertCanvasToImage(canvas);
-            });
+            })
+                ;
             }, 1100);
             setTimeout(function () {
                 doc.save("T-Shirt.pdf");
