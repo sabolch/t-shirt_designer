@@ -15,9 +15,22 @@ Route::get('/', function () {
     return redirect(route('home'));
 });
 Route::get('/dashboard', function () {
-    return "Megvan";
+    return redirect(route('users.index'));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('colors', 'ColorController');
+
+Route::resource('clothes', 'ClothesController');
+
+Route::post('/clothes/uploade', 'ClothesController@uploade')->name('clothes.uploade');
+
+Route::resource('users', 'UsersController');
+
+Route::resource('prints', 'PrintsController');
+
+Route::post('/uploade','PrintsController@uploade')->name('uploade');

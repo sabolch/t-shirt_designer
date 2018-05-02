@@ -2,11 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Playmarket Dashboard</title>
+    <title>Панель приладів</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <link rel="icon" type="image/png" href="{{ asset('images/play-button.png') }}"/>
-    <link rel="shortcut icon" href="{{ asset('images/play.png') }}" type="image/x-icon">
-
+    <link rel="icon" type="image/png" href="{{ asset('img/casual-t-shirt-.png')}}"/>
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -45,7 +43,7 @@
 
         <!-- Logo -->
         <a href="#" style="background-color: #35912e;" class="logo">
-            <b>Playmarket</b>
+            <b>Футболки</b>
         </a>
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" style="background-color: #35912e;" role="navigation">
@@ -61,7 +59,7 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="{{ asset('images/favicon.jpg') }}"
+                            <img src="{{ asset('img/casual-t-shirt-.png')}}"
                                  class="user-image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs"></span>
@@ -72,7 +70,7 @@
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fa fa-sign-out"></i> Logout
                         </a>
-                        <form id="logout-form" action="{{route('admin.logout')}}" method="GET" style="display: none;">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </li>
@@ -93,7 +91,7 @@
             <div class="user-panel">
                 <div class="pull-left image">
                     <img style="min-width: 50px; min-height: 50px;max-width: 50px; max-height: 50px;"
-                         src="{{ asset('images/favicon.jpg') }}" class="img-circle"
+                         src="{{ asset('img/casual-t-shirt-.png')}}" class="img-circle"
                          alt="User Image"/>
                 </div>
                 <div class="pull-left info">
@@ -108,71 +106,48 @@
 
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-user-secret"></i> <span>Admis</span>
+                        <i class="fa fa-user-secret"></i> <span>Адміністратори</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{route('admins.index')}}"><i class="fa fa-list"></i>Admins</a></li>
+                        <li><a href="{{ route('users.index') }}"><i class="fa fa-users"></i>Адміністратори</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-trophy"></i> <span>Developpers</span>
+                        <i class="fa fa-paint-brush"></i> <span>Кольори</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{route('users.developpers')}}"><i class="fa fa-list"></i>Developpers</a></li>
+                        <li><a href="{{ route('colors.index') }}"><i class="fa fa-paint-brush"></i>Кольори</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-users"></i> <span>Users</span>
+                        <i class="fa fa-reddit-alien"></i> <span>Типи футболок</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{route('users.index')}}"><i class="fa fa-list"></i>Users</a></li>
+                        <li><a href="{{ route('clothes.index') }}"><i class="fa fa-list"></i>Типи футболок</a></li>
                     </ul>
                 </li>
                 <li class="treeview menu">
                     <a href="#">
-                        <i class="fa fa-gamepad"></i> <span>Apps</span>
+                        <i class="fa fa-picture-o"></i> <span>Принти</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('applications.index') }}"><i class="fa fa-list"></i>Apps</a></li>
+                        <li><a href="{{ route('prints.index') }}"><i class="fa fa-picture-o"></i>Принти</a></li>
                     </ul>
                 </li>
-                <li class="treeview menu">
-                    <a href="#">
-                        <i class="fa fa-star"></i> <span>Ratings</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('rates.index')}}"><i class="fa fa-list"></i>Ratings</a></li>
-                    </ul>
-                </li>
-                <li class="treeview menu">
-                    <a href="#">
-                        <i class="fa fa-code-fork"></i> <span>Categories</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ route('categories.index') }}"><i class="fa fa-list"></i>Categories</a></li>
-                    </ul>
-                </li>
-
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -207,7 +182,6 @@
     </footer>
 
 </div>
-
 <!-- jQuery 3.1.1 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -223,6 +197,7 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+<script src="{{asset('js/jquery.form.js')}}"></script>
 
 <script src="http://bus-ticket.bdtask.com/bus365_demov2/assets/datatables/js/dataTables.min.js"
         type="text/javascript"></script>

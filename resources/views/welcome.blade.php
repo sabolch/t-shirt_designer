@@ -179,11 +179,9 @@
                                 <p style="font-family: 'Telex',sans-serif;font-weight: bold;line-height: 1;color: #317eac;text-rendering: optimizelegibility;">
                                     Стиль футболки</p>
                                 <select id="shirtstyle" class="form-control">
-                                    <option value="crew" selected="selected">Короткий рукав</option>
-                                    <option value="womens_crew">Жіноча футболка</option>
-                                    <option value="mens_longsleeve">Довгий рукав</option>
-                                    <option value="mens_hoodie">Худі</option>
-                                    <option value="mens_tank">Майки</option>
+                                    @foreach($shirts as $shirt)
+                                        <option value="{{ $shirt->image }}">{{ $shirt->name }}</option>
+                                        @endforeach
                                 </select>
                                 <!--						      </p>-->
                             </div>
@@ -231,8 +229,8 @@
                                 </h4>
 
                                 <div id="avatarlist" style="max-height: 500px; overflow: scroll;">
-                                    @foreach($images as $image)
-                                        <img class="img-polaroid tt" src="img/templates/{{$image}}">
+                                    @foreach($prints as $image)
+                                        <img class="img-polaroid tt" src="{{ asset('img/templates/') }}/{{$image->image}}">
                                     @endforeach
                                 </div>
                             </div>
