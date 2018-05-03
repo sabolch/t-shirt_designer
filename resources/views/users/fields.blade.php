@@ -17,7 +17,7 @@
 </div>
 
 <!-- Remember Token Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6" hidden>
     {!! Form::label('remember_token', 'Токен:') !!}
     {!! Form::text('remember_token', null, ['class' => 'form-control']) !!}
 </div>

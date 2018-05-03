@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Панель приладів</title>
+    <title>Панель керування</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="icon" type="image/png" href="{{ asset('img/casual-t-shirt-.png')}}"/>
     <!-- Bootstrap 3.3.7 -->

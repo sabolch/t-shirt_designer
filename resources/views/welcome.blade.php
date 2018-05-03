@@ -339,10 +339,10 @@
 <footer class="footer" id="footer" style="background-color: #333333; color: white; text-align: center; font-size: 20px;">
         <div class="footer-bottom">
             <div class="container text-center">
-                <a href="#"> <img style="max-width: 100px;padding: 15px;"
-                     src="http://www.college.uzhnu.edu.ua/wp-content/uploads/2015/11/%D0%91%D0%B5%D0%B7-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1.png"></a>
+                <a href="#">
                 <p class="Verdana">Для оформлення індивідуальних замовлень пишіть на електронну адресу: <i class="fa fa-envelope"></i> trymbati@gmail.com</p>
                 <p class="Verdana"> Природничо-гуманітарний коледж © 2018. Всі права захищені.</p>
+                </a>
             </div>
 
 </footer>

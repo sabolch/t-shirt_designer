@@ -8,6 +8,7 @@ use App\Repositories\UsersRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\Hash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -57,6 +58,8 @@ class UsersController extends AppBaseController
     public function store(CreateUsersRequest $request)
     {
         $input = $request->all();
+
+        $input["password"] = Hash::make($input["password"]);
 
         $users = $this->usersRepository->create($input);
 
