@@ -7,6 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Instalation 
+
+#### Clone the respository by 
+``` git clone https://github.com/VarghaSabee/t-shirt_designer.git ```
+#### install the laravel framework
+``` composer install ```
+#### Set the .env file including the database settings values and run 
+``` php artisan migrate ```
+#### Start the local server
+``` php artisan serve```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
