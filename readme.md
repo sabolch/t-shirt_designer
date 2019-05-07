@@ -13,6 +13,7 @@
 
 ### Admin page  [Link to admin page](http://shirt-t.herokuapp.com/login)
 #### Login : ```admin@gmail.com```  Password : ```adminadmin```
+The language of the application is Ukrainian
 <p align="center">
 <img src="https://i.ibb.co/J7vmSKp/t-shirt-admin.png" alt="t-shirt-admin" border="0">
 </p>
