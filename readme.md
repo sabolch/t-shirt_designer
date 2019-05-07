@@ -1,4 +1,22 @@
 # t-shirt design tool with laravel and jquery
+### Demo [Link to demo page](http://shirt-t.herokuapp.com/home). 
+
+### Front view
+<p align="center">
+  <img src="https://i.ibb.co/TBQLwLW/t-shirt.png" alt="t-shirt" border="0">
+</p>
+
+### Back view
+<p align="center">
+  <img src="https://i.ibb.co/GtyzLW5/t-shirt-2.png" alt="t-shirt-2" border="0">
+</p>
+
+### Admin page  [Link to admin page](http://shirt-t.herokuapp.com/login)
+#### Login : ```admin@gmail.com```  Password : ```adminadmin```
+<p align="center">
+<img src="https://i.ibb.co/J7vmSKp/t-shirt-admin.png" alt="t-shirt-admin" border="0">
+</p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
