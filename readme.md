@@ -1,7 +1,8 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=XFWJCX9JRNRJC)
 # t-shirt design tool with laravel and jquery
 ### Demo [Link to demo page](http://shirt-t.herokuapp.com/home). 
-
+#### Please support this project with a simple donation
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=XFWJCX9JRNRJC)
 ### Front view
 <p align="center">
   <img src="https://i.ibb.co/TBQLwLW/t-shirt.png" alt="t-shirt" border="0">
