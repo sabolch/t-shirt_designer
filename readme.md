@@ -1,3 +1,4 @@
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=XFWJCX9JRNRJC)
 # t-shirt design tool with laravel and jquery
 ### Demo [Link to demo page](http://shirt-t.herokuapp.com/home). 
 
